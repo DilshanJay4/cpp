@@ -19,8 +19,10 @@ Employee getEmp(Employee e) {
     cout << "Enter the Name of the Employee: ";
     getline(cin, e.name);
 
-    cout << "Enter the Over-time Fee: " << endl;
+    cout << "Enter the Over-time Fee: ";
     cin >> e.overtimeFee;
+
+    cout << endl;
 
     for (int i = 0; i < 5; i++) {
         cout << "Enter the number of OT Hours for Day " << (i + 1) << ": ";
@@ -32,13 +34,18 @@ Employee getEmp(Employee e) {
 
 // Function to calculate overtime payment
 void calOTpayment(float overtimeFee, int otHours[], int size) {
-    int totalOTPayment = 0;
+    int totalOTHours = 0;
+    int totalOTFee = 0;
+
     for (int i = 0; i < size; ++i) {
-        totalOTPayment += otHours[i];
+        totalOTHours += otHours[i];
     }
 
-    cout << "Total Over Time Payment: " << totalOTPayment * overtimeFee << endl;
+    totalOTFee = totalOTHours * overtimeFee;
+
+    cout << "Total Over Time Payment: " << totalOTFee << endl;
 }
+
 
 int main() {
     // Create Employee object
@@ -46,6 +53,8 @@ int main() {
 
     // Call getEmp() to get employee details
     emp = getEmp(emp);
+
+    cout << endl;
 
     // Call calOTpayment() to calculate and print overtime payment
     calOTpayment(emp.overtimeFee, emp.otHours, 5);
