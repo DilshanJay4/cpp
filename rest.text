@@ -1,0 +1,35 @@
+Entities:
+User:
+
+Attributes: ID, username, password, membership status (Premier, Frequent Flyer, Staff, Regular).
+Flight:
+
+Attributes: ID, departure city, destination city, departure time, arrival time, available seats, etc.
+Reservation:
+
+Attributes: ID, user ID, flight ID, seat number, status (confirmed, pending, canceled), etc.
+Endpoints:
+Authentication:
+
+POST /api/auth/login: User login.
+POST /api/auth/logout: User logout.
+User Management:
+
+GET /api/users/{id}: Retrieve user details.
+POST /api/users: Create a new user.
+PUT /api/users/{id}: Update user details.
+DELETE /api/users/{id}: Delete a user.
+Flight Management:
+
+GET /api/flights: Retrieve a list of available flights.
+GET /api/flights/{id}: Retrieve details for a specific flight.
+POST /api/flights: Create a new flight (admin/staff only).
+PUT /api/flights/{id}: Update flight details (admin/staff only).
+DELETE /api/flights/{id}: Delete a flight (admin/staff only).
+Reservation Management:
+
+GET /api/reservations: Retrieve a list of user reservations.
+GET /api/reservations/{id}: Retrieve details for a specific reservation.
+POST /api/reservations: Make a new reservation.
+PUT /api/reservations/{id}: Update reservation details (cancel or modify).
+DELETE /api/reservations/{id}: Cancel a reservation.

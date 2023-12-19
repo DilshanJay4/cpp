@@ -1,0 +1,26 @@
+<books>
+  <book>
+    <Title>The Catcher in the Rye</Title>
+    <Author>J.D. Salinger</Author>
+    <Genre>Fiction</Genre>
+    <PublishedYear>1951</PublishedYear>
+  </book>
+  <book>
+    <Title>To Kill a Mockingbird</Title>
+    <Author>Harper Lee</Author>
+    <Genre>Fiction</Genre>
+    <PublishedYear>1960</PublishedYear>
+  </book>
+  <book>
+    <Title>1984</Title>
+    <Author>George Orwell</Author>
+    <Genre>Dystopian</Genre>
+    <PublishedYear>1949</PublishedYear>
+  </book>
+  <book>
+    <Title>The Great Gatsby</Title>
+    <Author>F. Scott Fitzgerald</Author>
+    <Genre>Fiction</Genre>
+    <PublishedYear>1925</PublishedYear>
+  </book>
+</books>
